@@ -1,59 +1,35 @@
-<! Doctype html>
-<html>
-  <head>
-  <meta charset="utf-8">
-<title> Login </title>
-<link rel="stylesheet" type="text/css" href="log.css">
-    <style>
-      body {
-      background-image: url('sd.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;  
-      background-size: cover;
-     }
-	   input[type=submit]{
-	   border: solid 1px;
-	   font-size: 25px;
-	   background: #c0982f;
-	   padding: .2em;
-	   margin: .5em;
-	   border-radius: 6px;
-	   width: 96%;	
-       } 
-	   input[type=submit]:hover {
-	   background-color: #a6bbff;
-	   }
-	   input[type=text]{
-	   border: solid 1px;
-	   font-size: 25px;
-	   padding: .2em;
-	   margin: .5em;
-	   border-radius: 6px;
-	   width: 96%;	
-       } 
-	   input[type=password]{
-	   border: solid 1px;
-	   font-size: 25px;
-	   padding: .2em;
-	   margin: .5em;
-	   border-radius: 6px;
-	   width: 96%;	
-       }
-	   	   
-    </style>
-   </head>   
-    <body>
-	
-	<div id="input">
-     <form action="validar.php" method="post">
-	 
-    <div id="p">  <label for="user"><p>Usuario</p></label> </div>
-    <div id="p1">  <input type="text" id="usuario" name="usuario"> </br> </br></div>
-	 <div id="p"> <label for="pwd">Contraseña</label> </div>
-    <div id="p1">  <input type="password" id="pwd" name="pwd"> </br></div>
-	  <input type="submit" id="Iniciar" name="iniciar" value="Entrar">
-	  
-     </form>
-	 </div>
-    </body>
-	</html>
+<!DOCTYPE HTML>
+<html lang="es-ES">
+<head>
+	<meta charset="UTF-8">
+	<title>Suma de 2 numeros en PHP</title>
+</head>
+<body>
+<H2>Suma de 2 numeros en PHP</H2>
+<form action="suma.php" method="POST">
+	<table>
+	<tr>
+		<td><input type="text" name="numero1"></td>
+	</tr>
+	<tr>
+		<td><input type="text" name="numero2"></td>
+	</tr>
+	<tr>
+		<td> <input type="submit" value="sumar"> </td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
+<?php
+	if($_POST)
+	{	
+		$num1 = $_POST
+		['numero1'];
+		$num2 = $_POST
+		['numero2'];
+		$suma = $num1 
+		+ $num2;
+		echo "La suma de ".$num1." y ".$num2." es ".$suma; 
+	}
+?>
